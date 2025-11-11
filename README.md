@@ -20,7 +20,7 @@ When you're ready to check your work, check out [the official solution](https://
 - `npm install`
 - `npm run dev`
 
-Add your code to the `src/components/ToDoList.jsx` file.
+Add your code to the `src/components/ToDoList.tsx` file.
 
 
 # React + TypeScript + Vite
