@@ -7,9 +7,10 @@ interface ColumnProps {
   id: string;
   title: string;
   todos: Todo[];
+  onEdit: (id: number, newtext: string) => void;
 }
 
-export const Column: React.FC<ColumnProps> = ({ id, title, todos }) => {
+export const Column: React.FC<ColumnProps> = ({ id, title, todos, onEdit }) => {
   const { setNodeRef } = useDroppable({ id });
 
   return (
@@ -25,7 +26,7 @@ export const Column: React.FC<ColumnProps> = ({ id, title, todos }) => {
     >
       <h3 style={{ textAlign: 'center' }}>{title}</h3>
       {todos.map((todo) => (
-        <TaskCard key={todo.id} todo={todo} />
+        <TaskCard key={todo.id} todo={todo} onEdit={onEdit} />
       ))}
     </div>
   );
