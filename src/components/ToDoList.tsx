@@ -66,7 +66,6 @@ export const ToDoList: React.FC<ToDoListProps> = ({ todos, setTodos }) => {
     );
   };
 
-  // 🔍 Filter tasks if "Show Overdue Only" is on
   const filteredTodos = showOverdueOnly
     ? todos.filter(
         (t) =>
@@ -111,7 +110,6 @@ export const ToDoList: React.FC<ToDoListProps> = ({ todos, setTodos }) => {
 
         <button type="submit">Add</button>
 
-        {/* 🔍 Filter toggle */}
         <button
           type="button"
           onClick={() => setShowOverdueOnly((prev) => !prev)}
